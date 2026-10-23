@@ -1,14 +1,27 @@
 ﻿using System;
-using System.Collections;
 
-    class Program
+namespace CarNamespace{
+    public class Car
     {
-        static void Main(string[] args)
-        {
-List<object>list = new List<object>();
-list.Add(10);
-list.Add("Hello");
-Console.WriteLine(list[0]);
-Console.WriteLine(list[1]);
-        }
-    }
+        public string model;
+        public string color;
+        public int year;
+public Car(string modelName, string modelColor, int modelYear)
+{
+    model = modelName;
+
+    color = modelColor;
+
+    year = modelYear;
+}
+   }
+}
+class Program
+{
+static void Main(string[] args)
+{
+Car Ford = new Car("Mustang", "Red", 1969);
+
+Console.WriteLine(Ford.color + " " + Ford.year + " " + Ford.model);
+}
+}
