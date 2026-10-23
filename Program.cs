@@ -1,51 +1,18 @@
 ﻿using System;
-
-namespace StudentGradeCalculator
+namespace FillingTheBlanks
 {
-    public class Student
+ class Student
     {
-        public double grade;
+        private string name; // Private field to store the student's name
 
-        public void ReadGrade()
+        public string Name
         {
-            Console.WriteLine("Enter the grade of the student:");
-        }
-
-        public void GetGrade()
-        {
-            grade = Convert.ToDouble(Console.ReadLine());
-        }
-    }
-
-    public class Program
-    {
-        static void Main(string[] args)
-        {
-            Student student1 = new Student();
-            Student student2 = new Student();
-            Student student3 = new Student();
-
-            student1.ReadGrade();
-            student1.GetGrade();
-
-            student2.ReadGrade();
-            student2.GetGrade();
-
-            student3.ReadGrade();
-            student3.GetGrade();
-
-            double average = CalculateAverage(student1, student2, student3);
-            DisplayAverage(average);
-        }
-
-        static double CalculateAverage(Student s1, Student s2, Student s3)
-        {
-            return (s1.grade + s2.grade + s3.grade) / 3.0;
-        }
-
-        static void DisplayAverage(double average)
-        {
-            Console.WriteLine("The average grade of the students is: " + average);
+            get {
+                 return name; // Getter to retrieve the student's name
+                 }
+            set {
+                 name = value; // Setter to set the student's name
+                 }
         }
     }
 }
